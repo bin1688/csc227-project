@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--	
+		Blackboard: 
+		Date: 
+		File:	
+		Purpose: Write a Web-based application consisting of a Web form (lastname-software-order.html) and a PHP progam (lastname-software-order.php) 
+		
+		lastname-software-order.html currently contains code meeting the following algorithm:
+						
+					lastname-software-order.html algorithm
+						Prompt for numCopies
+						Get numCopies
+						Prompt for os
+						Get os
+						Submit numCopies, os to lastname-software-order.php
+					END
+					
+		REQUIREMENT: Create a php program that meets the following algorithm:
+					lastname-software-order.php algorithm:
+						Receive numCopies, os from softwareOrder.html
+						subtotal = numCopies * 35.00
+						tax = subtotal * 0.07
+						shippingHandling = numCopies * 1.25
+						totalCost = subtotal + tax + shippingHandling
+						Display os, numCopies, subtotal, tax, shippingHandling, totalCost
+					END	
+					
+		ADDITIONAL REQUIREMENTS:  
+				1. Modify lastname-software-order.html as needed
+				2. Display for Sub-total, Sales-tax, Shipping and Handling and Total are required to display 2 decimal points.
+-->
+<html>
+<head>
+	<title>SaveTheWorld Software</title>
+	<link rel ="stylesheet" type="text/css" href="sample.css" />
+</head>
+<body>
+<h1>SaveTheWorld: Order Form</h1>
+<p>To order <strong>SaveTheWorld</strong>, please complete the following order form: </p>
+<p>
+	<form action = "chen-software-order.php" method = "post" >
+		<table>
+		<tr>
+			<td>Choose your operating system:</td>
+			<td>
+				<select name = "os">
+					<option>Linux</option>
+					<option>Macintosh</option>
+					<option>Windows</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Number of copies:</td>
+			<td><input type = "text" size = "5" name = "numCopies" /></td>
+		</tr>
+		</table>
+		
+		<p>
+		<input type = "submit" value = "Submit Your Order" />
+		</p>
+	</form>
+</body>
+</html>
